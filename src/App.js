@@ -9,11 +9,16 @@ import UserList from "./pages/userList/UserList";
 function App() {
   return (
     <Router>
+     
       <Topbar/>
       <div className="container">
         <Sidebar/>
-       
-        <Home/>
+        
+      
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/users" element={<UserList/>} />
+      </Routes>
       </div>
     </Router>
   );
